@@ -9,5 +9,9 @@ public class Java8Programs {
         //find ot max no from list
         int max = list.stream().max(Integer::compareTo).get();
         System.out.println("Max No is :" + max);
+
+        // find min no from list
+        int min= list.stream().min(Integer::compareTo).get();
+        System.out.println("Min No is "+min);
     }
 }
