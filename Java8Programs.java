@@ -13,5 +13,13 @@ public class Java8Programs {
         // find min no from list
         int min= list.stream().min(Integer::compareTo).get();
         System.out.println("Min No is "+min);
+
+        //filter Example
+        System.out.println("Filter Even no from the list :");
+        list.stream().filter(no->no%2==0).forEach(System.out::println);
+
+        //Map Example
+        System.out.println("from list add 2 in each element: ");
+        list.stream().map(no->no+2).forEach(System.out::println);
     }
 }
