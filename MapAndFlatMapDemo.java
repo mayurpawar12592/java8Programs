@@ -13,6 +13,13 @@ public class MapAndFlatMapDemo {
                 collect(Collectors.toList());
         System.out.println(stringList);
 
-
+        List<List<Integer>> numberList = new ArrayList<>();
+        numberList.add(List.of(1, 2));
+        numberList.add(List.of(3, 4));
+        numberList.add(Arrays.asList(5, 6));
+        List<Integer> flatMapList = numberList.stream()
+                .flatMap(Collection::stream)
+                .collect(Collectors.toList());
+        System.out.println(flatMapList);
     }
 }
