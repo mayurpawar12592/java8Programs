@@ -10,6 +10,18 @@ public class FunctionalInterFaceExample {
         calculate doAddition = new DoubleAddition();
         System.out.println("Result of double addition:" + doAddition.add(10, 20));
 
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++");
+        System.out.println("two interfaces with same default method");
+        ArithMaticOperation operation =new ArithMaticOperation();
+        System.out.println("Arthmatic add: "+operation.add(5,6));
+        operation.print();
+
+
+        ArithMaticOperation operation1 =new ArithMaticOperation();
+        System.out.println("Arthmatic sub: "+operation1.sub(9,6));
+        operation.print();
+
+
 
     }
 }
