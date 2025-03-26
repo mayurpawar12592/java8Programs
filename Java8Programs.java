@@ -34,7 +34,7 @@ public class Java8Programs {
 
         //generate Infinte stream
         //System.out.println("Stream element");
-      //  Stream.generate(() -> "hello").forEach(System.out::println);
+        //  Stream.generate(() -> "hello").forEach(System.out::println);
 
         List<Book> bookList = List.of(new Book(10, "Java", "peter"),
                 new Book(12, "OOP", "delchris"),
@@ -43,8 +43,11 @@ public class Java8Programs {
 //        Map<String,List<Book>>  bookByAuthorMap= bookList.stream().
 //                collect(Collectors.toMap(Book::getBookAuthor, Function.identity()));
 //        System.out.println("Books by Author toMap "+bookByAuthorMap);
+        Map<String, List<Book>> bookByAuthor = bookList.stream().
+                collect(Collectors.groupingBy(Book::getBookAuthor));
+        System.out.println("Books by Author grouping " + bookByAuthor);
 
-           }
+    }
 }
 
 class Book {
